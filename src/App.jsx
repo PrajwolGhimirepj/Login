@@ -25,7 +25,7 @@ const App = () => {
             target="_blank"
             rel="noreferrer"
           >
-            @gadoodlez_
+            @gadoodlez
           </a>
         </div>
       </div>
