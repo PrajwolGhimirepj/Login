@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./NewUser.css";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../firebase/firebaseconfig"; // Ensure Firebase is correctly set up in your project
+import { auth } from "../Firebase/firebaseconfig"; // Ensure Firebase is correctly set up in your project
 import { Link, useNavigate } from "react-router-dom";
 const NewUser = () => {
   const [email, setEmail] = useState("");
