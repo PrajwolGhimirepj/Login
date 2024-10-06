@@ -75,14 +75,18 @@ const Login = () => {
           <div className="input">
             <div className="inputcontainers">
               <div className="info font">Email</div>
-              <input type="text" onChange={handeluserName} />
+              <input type="email" autoComplete="on" onChange={handeluserName} />
             </div>
             <div className="inputcontainers">
               <div className="info font">
                 <p className="info-err">{erremali}</p>
                 <p>Password</p>
               </div>
-              <input type="text" onChange={handelPassword} />
+              <input
+                type="password"
+                autoComplete="on"
+                onChange={handelPassword}
+              />
             </div>
           </div>
 
