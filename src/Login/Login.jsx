@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Login.css";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../Firebase/firebaseconfig"; // Make sure your Firebase config is correct
@@ -10,7 +10,6 @@ const Login = () => {
   const [error, setError] = useState(null);
   const [errpassword, setErrPassword] = useState(null);
   const [erremali, setErrEmail] = useState(null);
-
   const navigate = useNavigate();
 
   const handeluserName = (event) => {
@@ -46,8 +45,8 @@ const Login = () => {
         password
       );
       console.log("Login Successful:", userCredential);
-      alert("Login Successful");
-      navigate("/"); // Navigate to the home page after successful login
+
+      navigate("/");
     } catch (error) {
       console.error("Login Error:", error.message);
       setError("Failed to login. Check your credentials.");

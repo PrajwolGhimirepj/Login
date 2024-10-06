@@ -1,23 +1,40 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Login from "./Login/Login";
 import Signup from "./Signup/Signup";
 import NewUser from "./NewUser/NewUser";
 import Home from "./Home/Home";
+import { auth } from "./Firebase/firebaseconfig";
 
 const App = () => {
+  const [userEmail, setUserEmail] = useState(null);
+
+  useEffect(() => {
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        setUserEmail(user.email);
+      } else {
+        setUserEmail(null);
+      }
+    });
+  }, []);
+
   return (
     <Router>
       <div className="nav font-t">
-        <div className="felx">
-          <Link to="/">
-            <h1>Home</h1>
-          </Link>
-          <Link to="Login">
-            <h1>Login</h1>
-          </Link>
+        <div className="flex-c">
+          <div className="felx">
+            <Link to="/">
+              <h1>Home</h1>
+            </Link>
+            <Link to="Login">
+              <h1>Login</h1>
+            </Link>
+          </div>
+          {userEmail && <p> {userEmail}</p>}
         </div>
+        <p></p>
         <div className="felx">
           <h1>Artwork</h1>
           <a
