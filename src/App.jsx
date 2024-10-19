@@ -25,24 +25,19 @@ const App = () => {
       <div className="nav font-t">
         <div className="flex-c">
           <div className="felx">
-            <Link to="/">
-              <h1>Home</h1>
-            </Link>
-            <Link to="Login">
-              <h1>Login</h1>
-            </Link>
+            <Link to="/">{/* <h1>Home</h1> */}</Link>
+            <Link to="Login">{/* <h1>Login</h1> */}</Link>
           </div>
-          {userEmail && <p> {userEmail}</p>}
         </div>
         <p></p>
         <div className="felx">
-          <h1>Artwork</h1>
+          {/* <h1>Artwork</h1> */}
           <a
             href="https://www.instagram.com/gadoodlez_/ "
             target="_blank"
             rel="noreferrer"
           >
-            @gadoodlez
+            {/* @gadoodlez */}
           </a>
         </div>
       </div>
