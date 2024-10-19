@@ -100,11 +100,9 @@ const Login = () => {
             </div>
           </div>
 
-          <div className="loginbuton">
+          <div className="loginbuton" onClick={handleSubmit}>
             <Link to="/">
-              <h1 className="i" onClick={handleSubmit}>
-                Login
-              </h1>
+              <h1 className="i">Login</h1>
             </Link>
           </div>
           <div className="newuser font">

@@ -175,6 +175,7 @@ input {
   font-weight: 100;
   font-style: normal;
   transition-duration: 0.4s;
+  cursor: pointer;
 }
 
 .loginbuton:hover {
@@ -182,6 +183,7 @@ input {
 }
 .i {
   color: rgb(0, 0, 0);
+  cursor: pointer;
 }
 .newuser {
   height: 50px;

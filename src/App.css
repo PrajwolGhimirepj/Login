@@ -24,16 +24,14 @@
 .nav {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
-  height: 10%;
+  height: auto;
   width: 100%;
   align-items: center;
   position: fixed;
-  padding: 5%;
+  padding: 2%;
 }
 .felx {
   display: flex;
-
   gap: 10px;
   height: 100%;
   align-items: center;
@@ -49,4 +47,22 @@
 h1 {
   color: #ffffff;
   font-size: 20px;
+}
+
+@media (max-width: 700px) {
+  h1 {
+    color: #ffffff;
+    font-size: 13px;
+  }
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    height: 60px;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    padding: 5%;
+  }
 }
